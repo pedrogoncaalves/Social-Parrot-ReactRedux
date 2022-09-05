@@ -1,4 +1,4 @@
-import * as C from './App.Styles'
+import * as C from '../../../components/App.Styles'
 import "bootstrap/dist/css/bootstrap.min.css"
 import './styles.css'
 import logo from '../../../images/logo.png'

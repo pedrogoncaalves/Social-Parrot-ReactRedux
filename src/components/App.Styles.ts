@@ -2,10 +2,7 @@
 
 import styled from 'styled-components';
 
-import banner from '../../../images/background.png'
-
-
-
+import banner from '../images/background.png'
 
 
 
@@ -25,10 +22,23 @@ justify-content: center;
 box-sizing: border-box;
 position: absolute;
 width: 487px;
-height: 620px;
+height: 38.75rem;
 left: 450px;
 top: 160px;
 background: #FFFFFF;
 border: 1px solid #C5C5C5;
 `
 
+export const largerContainer = styled.div`
+border-radius: 5%;
+display:flex;
+justify-content: center;
+box-sizing: border-box;
+position: absolute;
+width: 487px;
+height: 50rem;
+left: 450px;
+top: 5rem;
+background: #FFFFFF;
+border: 1px solid #C5C5C5;
+`
