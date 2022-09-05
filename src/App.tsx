@@ -1,16 +1,16 @@
-
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './App.css'
-import * as C from './pages/Login/App.Styles'
-
+import * as C from './pages/pages/Login/App.Styles'
+import {Login} from './pages/pages/Login/index';
 function App() {
  
 
   return (
-    <C.Wrapper>
-      <C.Container>
-        <C.Logo/>
-      </C.Container>
-    </C.Wrapper>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/login" element={<Login />} />
+    </Routes>
+  </BrowserRouter>
     
   )
 }
