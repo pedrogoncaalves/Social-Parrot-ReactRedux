@@ -43,3 +43,11 @@ top: 1rem;
     font-weight: 600;
     color: rgb(34, 34, 34);
   }
+  .btn-btn-primary {
+    color:  black;
+    background-color: #76BB4C;
+  }
+
+  .btn-btn-primary:hover {
+    border-color: #6033AA;
+  }
