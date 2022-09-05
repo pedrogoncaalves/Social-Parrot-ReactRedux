@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import banner from '../../../images/background.png'
 
-import logo from '../../../images/logo.png'
+
 
 
 
@@ -31,11 +31,4 @@ top: 160px;
 background: #FFFFFF;
 border: 1px solid #C5C5C5;
 `
-export const Logo = styled.div`
-background-image: url(${logo});
 
-width: 171px;
-height: 185px;
-left: 80rem;
-top: 257px;
-`

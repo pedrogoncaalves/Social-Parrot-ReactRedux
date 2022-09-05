@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200;300&family=Questrial&family=Ubuntu:ital,wght@0,300;0,500;1,300;1,400&display=swap');
+
+html,
+body {
+    font-family: 'Questrial';
+}
+
+  .Auth-form {
+    width: 420px;
+    margin-top: 12rem;
+    margin-left: 0,8rem;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    
+  }
+  .Auth-form-img {
+    position: absolute;
+    
+width: 171px;
+height: 161px;
+left: 9.3rem;
+top: 1rem;
+
+  }
+  
+  
+  .Auth-form-content {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  
+  .Auth-form-title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 24px;
+    color: rgb(34, 34, 34);
+    font-weight: 800;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+  }
