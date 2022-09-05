@@ -1,5 +1,5 @@
 import * as C from '../../../components/App.Styles'
-
+import logo from '../../../images/logo.png'
 import './styles.css'
 
 export const Cadastro = () => {
@@ -7,7 +7,8 @@ export const Cadastro = () => {
         <C.Wrapper>
             <C.largerContainer>
             <form className='Auth-form-container'>
-        <h3>Sign Up</h3>
+            <div className="Auth-form-img">  <img src={logo}></img></div>
+        <h3>CADASTRO</h3>
         <div className="mb-3">
           <label>Nome</label>
           <input
