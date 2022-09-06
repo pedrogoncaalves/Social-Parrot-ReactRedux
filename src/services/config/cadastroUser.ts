@@ -1,16 +1,21 @@
+import baseAPI from ".";
 
 interface UsuarioPayload {
 
     nome:string;
     email: string;
     senha: string;
-    confirmarSenha: string;
-    
+    confirmSenha: string;
+    apartamento: string;
+
 
 }
 
 
 
-export function cadastroUsuario(payload) {
+export default function cadastroUsuario (payload: UsuarioPayload) {
+    return baseAPI.post("/user", {payload})
+
 
 }
+

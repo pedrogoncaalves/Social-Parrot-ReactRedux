@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import './App.css'
 import * as C from './components/App.Styles'
 import { Login } from './pages/pages/Login/index';
 import { Cadastro } from './pages/pages/Cadastro/index';

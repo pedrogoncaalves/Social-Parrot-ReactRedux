@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import * as C from '../App.Styles';
 import logo from '../../images/logo.png';
 import './styles.css';
+import cadastroUsuario from '../../services/config/cadastroUser';
 
 export const CadastroUsuario = () => {
 
@@ -11,10 +12,33 @@ export const CadastroUsuario = () => {
     const [confirmSenha, setConfirmSenha] = useState<string>("");
     const [apartamento, setApartamento] = useState<string>("");
 
+    const cadastro = async (event: FormEvent) => {
+      event.preventDefault();
+
+      const payload = {
+        nome,
+        email,
+        senha,
+        confirmSenha,
+        apartamento,
+      }
+      try {
+        const response = await cadastroUsuario(payload)
+        if(response.status !== 201) {
+          return alert("Ocorreu um erro!")
+        }
+        alert("Cadastro efetuado com sucesso!")
+      } catch (error) {
+        alert("Ocorreu um erro!")
+        
+      }
+
+    } 
+
     return(
         <C.Wrapper>
             <C.largerContainer>
-            <form className='Auth-form-container'>
+            <form className='Auth-form-container' onSubmit={cadastro}>
             <div className="Auth-form-img">  <img src={logo}></img></div>
         <h3>CADASTRO</h3>
         <div className="mb-3">
