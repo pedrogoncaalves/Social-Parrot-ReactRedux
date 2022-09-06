@@ -6,6 +6,7 @@ body {
 }
 
   .Auth-form {
+    align-items: center;
     width: 420px;
     margin-top: 12rem;
     margin-left: 0.8rem;
@@ -19,7 +20,7 @@ body {
     
 width: 171px;
 height: 161px;
-left: 9.3rem;
+left: 9.5rem;
 top: 1rem;
 
   }
