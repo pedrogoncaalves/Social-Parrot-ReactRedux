@@ -1,8 +1,8 @@
 
 
 export type Post = {
-    id: number,
-    idUser: number,
+    idpost: number,
+    iduser: number,
     nome: string,
     email: string,
     apartment: string,

@@ -1,8 +1,16 @@
-import * as C from '../App.Styles'
-import logo from '../../images/logo.png'
-import './styles.css'
+import { useState } from 'react';
+import * as C from '../App.Styles';
+import logo from '../../images/logo.png';
+import './styles.css';
 
 export const CadastroUsuario = () => {
+
+  const [nome, setNome] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
+    const [senha, setSenha] = useState<string>("");
+    const [confirmSenha, setConfirmSenha] = useState<string>("");
+    const [apartamento, setApartamento] = useState<string>("");
+
     return(
         <C.Wrapper>
             <C.largerContainer>
@@ -15,11 +23,13 @@ export const CadastroUsuario = () => {
             type="text"
             className="form-control"
             placeholder="nome"
+            value={nome} onChange={(event) => setNome(event.target.value)}
           />
         </div>
         <div className="mb-3">
           <label>Email</label>
-          <input type="email" className="form-control" placeholder="email" />
+          <input type="email" className="form-control" placeholder="email" value={email} 
+          onChange={(event) => setEmail(event.target.value)}/>
         </div>
         <div className="mb-3">
           <label>Senha</label>
@@ -27,6 +37,7 @@ export const CadastroUsuario = () => {
             type="password"
             className="form-control"
             placeholder="senha"
+            value={senha} onChange={(event) => setSenha(event.target.value)}
           />
         </div>
         <div className="mb-3">
@@ -35,6 +46,7 @@ export const CadastroUsuario = () => {
             type="password"
             className="form-control"
             placeholder="confirmar senha"
+            value={confirmSenha} onChange={(event) => setConfirmSenha(event.target.value)}
           />
         </div>
         <div className="mb-3">
@@ -43,6 +55,7 @@ export const CadastroUsuario = () => {
             type="text"
             className="form-control"
             placeholder="unidade"
+            value={apartamento} onChange={(event) => setApartamento(event.target.value)}
           />
           </div>
            <div className="mb-3">
