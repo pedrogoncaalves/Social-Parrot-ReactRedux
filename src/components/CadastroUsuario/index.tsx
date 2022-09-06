@@ -40,27 +40,26 @@ export const CadastroUsuario = () => {
         <div className="mb-3">
           <label>Unidade/Apartamento</label>
           <input
-            type="password"
+            type="text"
             className="form-control"
-            placeholder="senha"
+            placeholder="unidade"
           />
           </div>
            <div className="mb-3">
           <label>Link da foto</label>
           <input
-            type="password"
+            type="text"
             className="form-control"
-            placeholder="senha"
+            placeholder="link da foto"
           />
           </div>
         <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
-            Sign Up
+          <button type="submit" className="btn-btn-primary">
+            
+            Entre
           </button>
         </div>
-        <p className="forgot-password text-right">
-          Already registered <a href="/sign-in">sign in?</a>
-        </p>
+        
       </form>
             </C.largerContainer>
         </C.Wrapper>
