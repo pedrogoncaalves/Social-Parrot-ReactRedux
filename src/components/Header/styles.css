@@ -6,15 +6,18 @@
 
 .btn-logout {
     padding-left: 2rem;
-    background-color: white
+    background-color: white;
+    border-color: white;
+    border-style: none;
 }
 .btn-logout:hover {
+    border-color: aliceblue;
     box-shadow: none;
     box-sizing: border-box;
     border-style: none;
 }
 
 .navbar__container {
-    border-color: black;
+    
     box-shadow: inset;
 }

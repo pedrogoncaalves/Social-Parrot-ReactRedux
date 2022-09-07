@@ -2,8 +2,30 @@ import * as C from '../App.Styles'
 import "bootstrap/dist/css/bootstrap.min.css"
 import './styles.css'
 import logo from '../../images/logo.png'
+import { useContext, useState } from 'react'
+import { AuthContext } from '../../contexts/Auth/AuthContext'
+import { useNavigate } from 'react-router-dom'
 
 export const LoginParrot = () => {
+
+  const navigate = useNavigate();
+
+  const auth = useContext(AuthContext);
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = async () => {
+    if(email && password) {
+      const isLogged = await auth.signin(email, password)
+      if(isLogged) {
+        navigate('/profile')
+
+      }
+    }
+
+  }
+
    return(
         <C.Wrapper>
           <C.Container>
@@ -19,6 +41,8 @@ export const LoginParrot = () => {
               type="email"
               className="form-control mt-1"
               placeholder="email"
+              value={email}
+               onChange={(event) => setEmail(event.target.value)}
             />
           </div>
           <div className="form-group mt-3">
@@ -27,10 +51,12 @@ export const LoginParrot = () => {
               type="password"
               className="form-control mt-1"
               placeholder="senha"
+              value={password}
+               onChange={(event) => setPassword(event.target.value)}
             />
           </div>
           <div className="d-grid gap-2 mt-3">
-            <button type="submit" className="btn-btn-primary">
+            <button onClick={handleLogin}type="submit" className="btn-btn-primary">
               Entrar
             </button>
           </div>

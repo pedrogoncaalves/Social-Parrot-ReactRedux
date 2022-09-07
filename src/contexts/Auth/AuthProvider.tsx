@@ -6,7 +6,7 @@ import { User } from '../../types/index';
 
 import { AuthContext } from './AuthContext';
 
-export const AuthProvider = ({ chidren } : { children: JSX.Element }) => {
+export const AuthProvider = ({ children } : { children: JSX.Element }) => {
     const [user, setUser] = useState<User | null>(null) 
     const api = useApi();
 
@@ -26,7 +26,7 @@ export const AuthProvider = ({ chidren } : { children: JSX.Element }) => {
 
     return (
         <AuthContext.Provider value={{user, signin, signout}}>
-            {chidren}
+            {children}
             
             
         

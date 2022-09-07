@@ -3,6 +3,8 @@ import * as C from './components/App.Styles'
 import { Login } from './pages/pages/Login/index';
 import { Cadastro } from './pages/pages/Cadastro/index';
 import { Feed } from './pages/pages/Feed/index';
+import { PerfilUsuario } from "./pages/pages/PerfilUsuario";
+import { RequireAuth } from "./contexts/Auth/RequireAuth";
 
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
       <Route path="/" element={<Login />} />
       <Route path="/feed" element={<Feed />} />
       <Route path="/signup" element={<Cadastro />} />
+      <Route path="/profile" element={<RequireAuth><PerfilUsuario/></RequireAuth>} />
     </Routes>
   </BrowserRouter>
     
