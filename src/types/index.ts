@@ -16,6 +16,6 @@ export interface SignIn {
 }
 
 export type User = {
-    nome: string,
+    name: string,
     password: string,
 }

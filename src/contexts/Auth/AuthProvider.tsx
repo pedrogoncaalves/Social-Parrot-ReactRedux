@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import baseAPI, { useApi } from '../../services/config';
+import {baseAPI , useApi } from '../../services/config';
 
 import { User } from '../../types/index';
 

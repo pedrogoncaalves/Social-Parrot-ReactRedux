@@ -1,4 +1,4 @@
-import baseAPI from ".";
+import { baseAPI } from './index'
 
 interface UsuarioPayload {
 

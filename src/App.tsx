@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="/feed" element={<Feed />} />
+      <Route path="/feed" element={<RequireAuth><Feed /></RequireAuth>} />
       <Route path="/signup" element={<Cadastro />} />
       <Route path="/profile" element={<RequireAuth><PerfilUsuario/></RequireAuth>} />
     </Routes>

@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-const baseAPI = axios.create({
+ export const baseAPI = axios.create({
     baseURL: "http://localhost:3030",
     headers: {
         "Content-Type": "application/json"
@@ -16,8 +16,8 @@ export const useApi = () => ({
     
 
 signIn: async (email:string, password: string) => {
-    const response = await baseAPI.post('/signin', {email, password});
-    return response.data
+    const response = await baseAPI.post('/login', {email, password});
+    return console.log(response.data)
 
 },
 logOut: async () => {
@@ -28,5 +28,5 @@ logOut: async () => {
 
 })
 
-export default baseAPI;
+
 
