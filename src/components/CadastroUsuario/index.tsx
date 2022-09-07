@@ -6,21 +6,22 @@ import cadastroUsuario from '../../services/config/cadastroUser';
 
 export const CadastroUsuario = () => {
 
-  const [nome, setNome] = useState<string>("");
+  const [name, setName] = useState<string>("");
     const [email, setEmail] = useState<string>("");
-    const [senha, setSenha] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
     const [confirmSenha, setConfirmSenha] = useState<string>("");
-    const [apartamento, setApartamento] = useState<string>("");
+    const [apartment, setApartment] = useState<string>("");
+    const [userphoto, setUserphoto] = useState<string>("");
 
     const cadastro = async (event: FormEvent) => {
       event.preventDefault();
 
       const payload = {
-        nome,
+        name,
         email,
-        senha,
-        confirmSenha,
-        apartamento,
+        password,
+        apartment,
+        userphoto
       }
       try {
         const response = await cadastroUsuario(payload)
@@ -47,7 +48,7 @@ export const CadastroUsuario = () => {
             type="text"
             className="form-control"
             placeholder="nome"
-            value={nome} onChange={(event) => setNome(event.target.value)}
+            value={name} onChange={(event) => setName(event.target.value)}
           />
         </div>
         <div className="mb-3">
@@ -61,7 +62,7 @@ export const CadastroUsuario = () => {
             type="password"
             className="form-control"
             placeholder="senha"
-            value={senha} onChange={(event) => setSenha(event.target.value)}
+            value={password} onChange={(event) => setPassword(event.target.value)}
           />
         </div>
         <div className="mb-3">
@@ -79,7 +80,7 @@ export const CadastroUsuario = () => {
             type="text"
             className="form-control"
             placeholder="unidade"
-            value={apartamento} onChange={(event) => setApartamento(event.target.value)}
+            value={apartment} onChange={(event) => setApartment(event.target.value)}
           />
           </div>
            <div className="mb-3">
@@ -88,6 +89,7 @@ export const CadastroUsuario = () => {
             type="text"
             className="form-control"
             placeholder="link da foto"
+            value={userphoto} onChange={(event) => setUserphoto(event.target.value)}
           />
           </div>
         <div className="d-grid">

@@ -2,12 +2,11 @@ import baseAPI from ".";
 
 interface UsuarioPayload {
 
-    nome:string;
+    name:string;
     email: string;
-    senha: string;
-    confirmSenha: string;
-    apartamento: string;
-
+    password: string;
+    apartment: string;
+    userphoto: string;
 
 }
 
