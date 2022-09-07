@@ -15,8 +15,7 @@ export interface SignIn {
     password: string
 }
 
-export interface User extends SignIn {
-    id: number,
+export type User = {
     nome: string,
-    apartment: string,
+    password: string,
 }

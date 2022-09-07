@@ -14,8 +14,6 @@ interface UsuarioPayload {
 
 
 export default function cadastroUsuario (payload: UsuarioPayload) {
-    return baseAPI.post("/user", {payload})
-
-
+    return baseAPI.post("/user", payload)
 }
 
