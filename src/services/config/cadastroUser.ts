@@ -6,6 +6,7 @@ interface UsuarioPayload {
     email: string;
     password: string;
     apartment: string;
+    confirmSenha?:string;
     userphoto: string;
 
 }
