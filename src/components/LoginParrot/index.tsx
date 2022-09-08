@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import './styles.css'
 import logo from '../../images/logo.png'
 import { FormEvent, useContext, useState } from 'react'
-import { AuthContext } from '../../contexts/Auth/AuthContext'
+
 import { useNavigate } from 'react-router-dom'
 
 export const LoginParrot = () => {
@@ -11,22 +11,14 @@ export const LoginParrot = () => {
 const navigate = useNavigate();
   
 
-  const auth = useContext(AuthContext);
+  
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = async (event: FormEvent) => {
     event.preventDefault();
-    if(email && password) {
-      const isLogged = await auth.signin(email, password)
-      if(isLogged) {
-        navigate('/profile')
-
-      } else {
-        alert("Não foi possível fazer o login!")
-      }
-    }
+    
 
   }
 

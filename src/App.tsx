@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import * as C from './components/App.Styles'
-import { Login } from './pages/pages/Login/index';
-import { Cadastro } from './pages/pages/Cadastro/index';
-import { Feed } from './pages/pages/Feed/index';
-import { PerfilUsuario } from "./pages/pages/PerfilUsuario";
-import { RequireAuth } from "./contexts/Auth/RequireAuth";
+import { Login } from './pages/Login/index';
+import { Cadastro } from './pages/Cadastro/index';
+import { Feed } from './pages/Feed/index';
+import { PerfilUsuario } from "./pages/PerfilUsuario";
+
 
 
 function App() {
@@ -13,9 +13,9 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="/feed" element={<RequireAuth><Feed /></RequireAuth>} />
+      <Route path="/feed" element={<Feed />} />
       <Route path="/signup" element={<Cadastro />} />
-      <Route path="/profile" element={<RequireAuth><PerfilUsuario/></RequireAuth>} />
+      <Route path="/profile" element={<PerfilUsuario/>}/>
     </Routes>
   </BrowserRouter>
     
