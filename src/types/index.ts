@@ -16,6 +16,16 @@ export interface SignIn {
 }
 
 export type User = {
-    name: string,
-    password: string,
+    id: number;
+    name: string;
+    email: string;
+    password: string;
+
+   
+}
+
+export type Data = {
+    user: User 
+
+    
 }
