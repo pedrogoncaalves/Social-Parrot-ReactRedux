@@ -5,6 +5,7 @@ import logo from '../../images/logo.png'
 import { FormEvent, useContext, useState } from 'react'
 
 import { useNavigate } from 'react-router-dom'
+import { login } from '../../services/config/login'
 
 export const LoginParrot = () => {
   
@@ -18,6 +19,13 @@ const navigate = useNavigate();
 
   const handleLogin = async (event: FormEvent) => {
     event.preventDefault();
+
+    try {
+       const response = await login ({email, password})
+       console.log(response.data.token)
+    } catch (error) {
+      alert("Ocorreu um erro ao tentar fazer login!")
+    }
     
 
   }
