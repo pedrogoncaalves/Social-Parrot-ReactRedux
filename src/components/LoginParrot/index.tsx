@@ -3,17 +3,15 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import './styles.css'
 import logo from '../../images/logo.png'
 import { FormEvent, useContext, useState } from 'react'
-
+import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom'
 import { login } from '../../services/config/login'
+import { setUser } from '../../store/users'
 
 export const LoginParrot = () => {
   
-const navigate = useNavigate();
+const dispatch = useDispatch();
   
-
-  
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -23,6 +21,13 @@ const navigate = useNavigate();
     try {
        const response = await login ({email, password})
        console.log(response.data.token)
+
+       dispatch(
+        setUser({
+          token: response.data.token,
+          email
+        })
+       )
     } catch (error) {
       alert("Ocorreu um erro ao tentar fazer login!")
     }
