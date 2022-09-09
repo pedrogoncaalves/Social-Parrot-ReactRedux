@@ -5,7 +5,8 @@
  }
 
 .btn-logout {
-    padding-left: 2rem;
+    color: #6033AA;
+    margin-left: 2rem;
     background-color: white;
     border-color: white;
     border-style: none;
@@ -13,11 +14,14 @@
 .btn-logout:hover {
     border-color: aliceblue;
     box-shadow: none;
-    box-sizing: border-box;
-    border-style: none;
+    
+    
+   
 }
 
 .navbar__container {
+    border-color: grey;
     
-    box-shadow: inset;
+    
 }
+

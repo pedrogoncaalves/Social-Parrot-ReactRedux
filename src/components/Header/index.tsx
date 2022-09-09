@@ -11,8 +11,8 @@ export const Header = () => {
           <Navbar.Brand href="#home"><img src={navbarbrand}></img></Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text color="#76BB4C">
-              Olá,  <a href="#login">usuário</a>
+            <Navbar.Text >
+              Olá,  <a color="#6033AA"href="#login">usuário</a>
               <button className='btn-logout'>sair</button>
             </Navbar.Text>
           </Navbar.Collapse>
