@@ -7,9 +7,6 @@ interface UserState {
     isLogged: boolean;
 }
 
-
-
-
 const userReduce = createSlice({
     name: "user",
     initialState: {
@@ -33,9 +30,6 @@ const userReduce = createSlice({
             });
         }}})
     
-
-
-
 export  const { setUser, removeUser } = userReduce.actions;
 
 export default userReduce.reducer;
